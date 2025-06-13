@@ -1,9 +1,9 @@
-
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Youtube, Facebook, Globe, Mail, GraduationCap, User, Briefcase } from "lucide-react";
+import { Youtube, Facebook, Globe, Mail, GraduationCap, User, Briefcase, LogIn } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,6 +18,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      {/* Navigation */}
+      <nav className="absolute top-0 right-0 p-6 z-10">
+        <Link to="/login">
+          <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white">
+            <LogIn className="mr-2 h-4 w-4" />
+            Sign In
+          </Button>
+        </Link>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10" />
